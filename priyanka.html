@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="lock">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f9e6cc">
+<title>Priyanka &amp; Anshul | Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@600&display=swap" rel="stylesheet">
+<!-- STYLE DNA: soft, floral, regal, festive, glowing. Cream #fdf3e2 / peach #f9e6cc, maroon #7a1c33, gold #d4a649 #c8963e #e8cd92, ink #5a2a2a, rose #e8689b, leaf #5f8f3f.
+Fonts: Great Vibes (names), Cormorant Garamond (everything else). Arch-shaped gold double-ruled frames, maroon gold-edged pills, pink rose garlands, palms, peacocks, domes.
+Motion: sealed-envelope opening, swinging bells, drifting sparkles, 35% parallax on corner artwork, warm glow and trail behind the cursor. -->
+<style>
+:root{--mr:#7a1c33;--mr2:#92283f;--gd:#d4a649;--gd2:#c8963e;--gl:#e8cd92;--ink:#5a2a2a;--tx:#6b4a3a;--cr:#fdf3e2}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+html.lock,html.lock body{overflow:hidden}
+body{font:500 clamp(17px,2.2vw,19px)/1.55 'Cormorant Garamond',Georgia,serif;color:var(--tx);background:#f9e6cc}
+img{display:block}
+a:focus-visible,button:focus-visible{outline:2px solid var(--mr);outline-offset:3px}
+#tr{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:999}
+#app{position:relative;max-width:1024px;margin:auto;overflow:hidden;background:radial-gradient(70% 18% at 50% 8%,#fffaf0,transparent),radial-gradient(60% 24% at 0 38%,#f9d6d2aa,transparent),radial-gradient(60% 24% at 100% 68%,#f9d6d2aa,transparent),linear-gradient(#fdf3e3,#f9e5ca 45%,#fbeedb)}
+section,footer{position:relative;z-index:1;text-align:center;padding:34px max(14px,5vw)}
+.ic{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.fi{width:1em;height:1em;fill:#e8c26a;flex:none}
+/* envelope */
+#env{position:fixed;inset:0;z-index:100;display:grid;place-items:center;align-content:center;gap:34px;background:radial-gradient(circle at 50% 40%,#fff8ea,#f6dfbd 78%);transition:opacity .7s;touch-action:none}
+#env.done{opacity:0;pointer-events:none}
+#env:after{content:"";position:absolute;inset:0;background:#fff8e6;opacity:0;pointer-events:none}
+#env.flash:after{animation:fl .7s}
+.ep{position:relative;width:min(88vw,440px);aspect-ratio:7/5;perspective:900px}
+.ep>*{position:absolute}
+.bk{inset:0;background:linear-gradient(#f3dcb8,#e6c895);border:1px solid var(--gd);border-radius:6px}
+.cr{left:6%;right:6%;top:8%;bottom:8%;background:var(--cr);border:1px solid var(--gd);display:grid;place-items:start center;padding-top:9%;font:italic 600 clamp(.8rem,3.6vw,1.15rem) 'Cormorant Garamond';color:var(--mr);transition:transform 1s .45s;z-index:2}
+.open .cr{transform:translateY(-42%)}
+.fr{inset:0;z-index:3;clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%);background:linear-gradient(160deg,#f9e8cb,#ecd0a0)}
+.fp{left:0;right:0;top:0;height:56%;z-index:4;clip-path:polygon(0 0,100% 0,50% 100%);background:linear-gradient(#fbeed3,#ebd1a2);transform-origin:top;transition:transform .8s}
+.open .fp{transform:rotateX(180deg);z-index:1;transition:transform .8s,z-index 0s .4s}
+.sl{left:50%;top:56%;width:22%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;border:2px solid var(--gd);background:radial-gradient(circle at 35% 30%,#b23553,#7a1c33 62%,#4e0f20);font:600 clamp(1.7rem,9vw,2.7rem)/1 'Noto Serif Devanagari',serif;color:#f0cf85;cursor:pointer;z-index:5;box-shadow:0 6px 14px #4e0f2066,inset 0 0 0 4px #ffffff22;animation:pl 2.4s ease-in-out infinite;transition:opacity .5s}
+.glow .sl{box-shadow:0 0 28px 12px #ffcf7acc,0 0 80px 30px #ffcf7a88;animation:none}
+.open .sl{opacity:0}
+.rg{left:50%;top:56%;width:20px;height:20px;border-radius:50%;border:3px solid #ffe3a0;box-shadow:0 0 30px #ffcf7a;translate:-50% -50%;opacity:0;z-index:6;pointer-events:none}
+.ring .rg{animation:rg 1s ease-out}
+.ep>span{left:50%;top:56%;width:7px;height:7px;border-radius:50%;background:radial-gradient(#fff,#ffd98a);box-shadow:0 0 9px #ffcf7a;z-index:6;animation:br 1.1s ease-out forwards}
+.tp{font-style:italic;color:var(--mr);letter-spacing:.06em}
+@keyframes pl{50%{scale:1.07}}
+@keyframes rg{0%{opacity:.9;scale:1}100%{opacity:0;scale:60}}
+@keyframes br{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(.2)}}
+@keyframes fl{0%{opacity:0}35%{opacity:.9}100%{opacity:0}}
+/* hero */
+#hero{--aw:clamp(120px,25vw,260px);min-height:max(580px,min(100svh,780px));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px clamp(16px,7vw,100px) 60px}
+.ha{position:absolute;top:0;width:var(--aw);aspect-ratio:260/700;pointer-events:none;z-index:0;will-change:transform}
+.ha.l{left:0}.ha.r{right:0;scale:-1 1}
+#hero>:not(.ha){position:relative;z-index:1;opacity:0;transform:translateY(12px)}
+.go #hero>:not(.ha){animation:up 1s calc(var(--i)*.15s + .2s) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.bl{font-size:clamp(1.05rem,2.7vw,1.4rem);color:var(--ink)}
+.orn{display:flex;align-items:center;gap:10px;justify-content:center;width:min(330px,72%);margin:8px auto}
+.orn:before,.orn:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gd2))}
+.orn:after{transform:scaleX(-1)}
+.orn .fi{fill:var(--mr2);width:22px;height:22px}
+h1{font:400 clamp(2.6rem,10.6vw,5.6rem)/1.15 'Great Vibes',cursive;color:var(--mr);white-space:nowrap;margin:4px 0}
+h1 i{font-style:normal;color:var(--gd2);margin:0 .1em}
+.sub{font-size:clamp(1.25rem,3.6vw,1.75rem);color:var(--ink)}
+.dt{display:inline-flex;gap:10px;align-items:center;font:700 clamp(1.3rem,4.4vw,2.05rem) 'Cormorant Garamond';color:var(--ink);margin:6px 0 18px}
+.dt .ic{color:var(--mr)}
+.bt,.pill{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;border:2px solid var(--gd);background:linear-gradient(#92283f,#6b1629);color:#fdecd2;font:600 1.1rem 'Cormorant Garamond',serif;text-decoration:none;box-shadow:0 6px 14px -6px #6b1629,inset 0 0 0 2px #0000001a}
+.bt{padding:.55em 1.6em;cursor:pointer;min-height:46px;transition:transform .3s,box-shadow .3s}
+.bt:hover{transform:translateY(-2px);box-shadow:0 10px 18px -6px #6b1629}
+.pill{padding:.3em 1.5em;font-size:clamp(1.2rem,3.6vw,1.65rem);white-space:nowrap}
+.sd{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:.95rem;color:var(--ink);text-decoration:none}
+.sd:before,.sd:after{content:"";width:clamp(28px,10vw,90px);height:1px;background:var(--gd2)}
+.sd .ic{color:var(--mr);height:1.6em}
+.sw{transform-box:fill-box;transform-origin:50% 0;animation:sw 4s ease-in-out infinite alternate}
+@keyframes sw{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.bk2{position:absolute;z-index:0;border-radius:50%;background:radial-gradient(#fff,#fff0 70%);pointer-events:none;animation:tw 4s ease-in-out infinite alternate}
+@keyframes tw{from{opacity:.15;scale:.7}to{opacity:.9;scale:1.15}}
+.sd2{position:absolute;z-index:0;top:calc(var(--aw,260px)*2.69 - 30px);bottom:0;width:clamp(64px,15vw,150px);display:flex;flex-direction:column;pointer-events:none;overflow:hidden}
+#app{--aw:clamp(120px,25vw,260px)}
+.sd2.l{left:0}.sd2.r{right:0;align-items:flex-end}.sd2.r svg{scale:-1 1}
+.sd2 svg{display:block;flex:none}
+/* frames */
+.arc{position:relative}
+.fo{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:2}
+.arc>.fo:first-child{z-index:0;filter:drop-shadow(0 8px 12px #b0802c40)}
+.ph{filter:drop-shadow(0 8px 12px #b0802c40)}
+.im{position:absolute;inset:0;clip-path:url(#ar);overflow:hidden;background:#f3e2c4}
+.im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pc,.ph{aspect-ratio:.76}
+.pc .im img{transform-origin:var(--o);transform:translate(var(--t)) scale(2.3)}
+.nmp{position:absolute;left:0;right:0;bottom:0;height:24%;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5%;background:linear-gradient(#fdf3e2,#faead2);border-top:1px solid var(--gl)}
+.nmp h3{font:700 clamp(1.1rem,3.8vw,1.85rem)/1.1 'Cormorant Garamond';color:var(--ink)}
+.lbl{position:absolute;left:50%;bottom:24%;translate:-50% 50%;z-index:3;padding:.1em 1em;font-size:clamp(.95rem,3vw,1.3rem);gap:6px}
+.cf{position:absolute;bottom:-6%;width:46%;z-index:4;pointer-events:none;overflow:visible}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,7vw,80px);max-width:640px;margin:0 auto;padding:6px clamp(0px,3vw,20px) 20px}
+/* framed boxes */
+.cb{position:relative;max-width:700px;margin:26px auto 0;padding:46px clamp(14px,4vw,34px) 24px;border-radius:26px;border:2px solid #dfbd75;background:linear-gradient(#fffaf0c8,#fbeed6c8);box-shadow:inset 0 0 0 6px var(--cr),inset 0 0 0 7px var(--gl),0 12px 24px -16px #b0802c}
+.hd{position:absolute;top:0;left:50%;translate:-50% -50%;z-index:3}
+.cc{position:absolute;bottom:-12px;width:90px;pointer-events:none;overflow:visible}
+.cc.l{left:-14px}.cc.r{right:-14px;scale:-1 1}
+.cn{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,2.5vw,20px);max-width:560px;margin:auto}
+.cn div{border:1.5px solid var(--gl);border-radius:14px;background:linear-gradient(#fffaf0,#fbeed6);padding:12px 2px 8px;box-shadow:0 4px 10px -6px #b0802c,inset 0 0 12px #fff}
+.cn b{display:block;font:700 clamp(1.8rem,7.2vw,3.1rem)/1.05 'Cormorant Garamond';color:var(--mr)}
+.cn span{font-size:clamp(.85rem,2.8vw,1.05rem);color:var(--ink)}
+.cn.jm{display:block;font:400 clamp(2.4rem,10vw,4rem) 'Great Vibes';color:var(--mr)}
+#cs{margin-top:14px;font-style:italic;color:var(--ink)}
+.vg{display:grid;gap:20px;align-items:center}
+.ir{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 0}
+.it{flex:1 1 130px;display:flex;align-items:center;justify-content:center;gap:9px;text-align:left;padding:0 10px;line-height:1.3;color:var(--ink);font-weight:600}
+.it .ic{color:var(--mr);width:1.5em;height:1.5em}
+.it small{display:block;font-weight:500;font-size:.95em;color:var(--tx)}
+.bx{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
+.mp{display:block;border-radius:16px;overflow:hidden;border:2px solid var(--gd);aspect-ratio:1.55;box-shadow:0 6px 14px -8px #7d5a22}
+.mp img{display:block;width:100%;height:100%;object-fit:cover}
+.photo-credit{display:block;margin-top:8px;font-size:.78rem;line-height:1.5;text-align:center}
+.photo-credit a{color:inherit}
+.venue-photo{margin:0}
+.ev{display:grid;grid-template-columns:1fr 1fr;gap:26px 14px;max-width:780px;margin:30px auto 0}
+.ec{padding:clamp(34px,9vw,52px) 8px 20px}
+.ci{position:relative;z-index:1}
+.ei{width:100%;height:clamp(120px,24vw,180px);display:block;margin:0 auto 10px;object-fit:cover;border-radius:12px}
+.ec h3{font:700 1.4rem 'Cormorant Garamond';color:var(--mr)}
+.ec .d{font-weight:700;color:var(--ink)}
+.ec .i{font-style:italic;font-size:.92em;margin-top:4px}
+.gl{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:620px;margin:32px auto 0}
+.rv{opacity:0;transition:opacity 1.1s}.rv.v2{opacity:1}
+@media(min-width:760px){.ev{grid-template-columns:repeat(4,1fr)}.vg{grid-template-columns:1.3fr 1fr}.it{border-left:1px solid var(--gl)}.it:first-child{border:0}}
+@media(max-width:759px){.it{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<canvas id="tr"></canvas>
+<div id="env">
+ <div class="ep"><i class="bk"></i><i class="cr">Shree Ganeshaya Namah</i><i class="fr"></i><i class="fp"></i><button class="sl" id="sl" aria-label="Open the invitation">ॐ</button><i class="rg"></i></div>
+ <p class="tp">Tap the seal to open</p>
+</div>
+
+<div id="app">
+<section id="hero">
+ <svg class="ha l" id="hl" viewBox="0 0 260 700" aria-hidden="true"></svg>
+ <svg class="ha r" id="hr" viewBox="0 0 260 700" aria-hidden="true"></svg>
+ <p class="bl" style="--i:0">Shree Ganeshaya Namah</p>
+ <i class="orn" style="--i:1"><svg class="fi" viewBox="-9 -9 18 18"><use href="#fl"/></svg></i>
+ <h1 style="--i:2">Priyanka <i>&amp;</i> Anshul</h1>
+ <p class="sub" style="--i:3">Wedding Invitation</p>
+ <i class="orn" style="--i:3"><svg class="fi" viewBox="-9 -9 18 18"><use href="#fl"/></svg></i>
+ <p class="dt" style="--i:4"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-c"/></svg>4 December 2026</p>
+ <a class="bt" href="#count" style="--i:5">Save the Date <svg class="ic" viewBox="0 0 24 24"><use href="#ic-v"/></svg></a>
+ <a class="sd" href="#couple" style="--i:6"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-m"/></svg>Scroll Down</a>
+</section>
+<div class="sd2 l"></div><div class="sd2 r"></div>
+
+<section id="couple"><div class="pr">
+ <article class="arc pc rv"><div class="im"><img src="photo2.jpg" alt="Priyanka" style="--o:35% 37.5%;--t:15%,4.5%"><div class="nmp"><h3>Priyanka</h3></div></div><span class="pill lbl" data-p="Bride"></span></article>
+ <article class="arc pc rv"><div class="im"><img src="photo2.jpg" alt="Anshul" style="--o:66% 35%;--t:-16%,7%"><div class="nmp"><h3>Anshul</h3></div></div><span class="pill lbl" data-p="Groom"></span></article>
+</div></section>
+
+<section id="count"><div class="cb rv" data-cc>
+ <div class="hd"><span class="pill" id="cl"></span></div>
+ <div class="cn" id="cn"></div><p id="cs"></p>
+</div></section>
+
+<section id="venue"><div class="cb rv" data-cc>
+ <div class="hd"><span class="pill" data-p="Venue Details"></span></div>
+ <div class="vg"><div>
+  <div class="ir">
+   <div class="it"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-c"/></svg><span>4 December 2026</span></div>
+   <div class="it"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-t"/></svg><span>8:00 PM IST</span></div>
+   <div class="it"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-p"/></svg><span>The Leela Palace Udaipur<small>Ambamata Udaipur</small></span></div>
+  </div>
+  <div class="bx"><button class="bt" id="ics"><svg class="ic" viewBox="0 0 24 24"><use href="#ic-c"/></svg>Add to Calendar</button><a class="bt" data-m><svg class="ic" viewBox="0 0 24 24"><use href="#ic-p"/></svg>Get Directions</a></div>
+ </div>
+ <figure class="venue-photo">
+  <a class="mp" data-m aria-label="Open The Leela Palace Udaipur in Google Maps">
+   <img src="images/udaipur-city-palace.jpg" alt="City Palace and Lake Pichola in Udaipur" loading="lazy" decoding="async">
+  </a>
+  <figcaption class="photo-credit">Udaipur view. Photo: <a href="https://commons.wikimedia.org/wiki/File:20191207_City_Palace,_Mohan_Temple_and_Lake_Pichola,_Udaipur,_1523_7262.jpg" target="_blank" rel="noopener noreferrer">Jakub Hałun</a>,
+   <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></figcaption>
+ </figure></div>
+</div></section>
+
+<section id="events">
+ <span class="pill" data-p="Wedding Events"></span>
+ <div class="ev" id="evs"></div>
+</section>
+
+<section id="moments">
+ <span class="pill" data-p="Our Moments"></span>
+ <div class="gl">
+  <figure class="arc ph rv"><div class="im"><img src="images/mehndi-ceremony.jpg" alt="Intricate henna designs at an Indian wedding" loading="lazy" style="object-position:50% 62%"></div></figure>
+  <figure class="arc ph rv"><div class="im"><img src="images/haldi-ceremony.jpg" alt="Family gathered at a traditional haldi ceremony" loading="lazy"></div></figure>
+  <figure class="arc ph rv"><div class="im"><img src="images/baraat-dance.jpg" alt="Guests dancing in a lively Indian wedding baraat" loading="lazy" style="object-position:50% 55%"></div></figure>
+  <figure class="arc ph rv"><div class="im"><img src="images/sangeet-celebration.jpg" alt="Musicians performing at an Indian wedding sangeet" loading="lazy" style="object-position:50% 60%"></div></figure>
+ </div>
+</section>
+
+<footer style="padding-bottom:80px"><p style="font:400 clamp(2.2rem,8vw,3.4rem)/1.2 'Great Vibes';color:var(--mr)">Priyanka &amp; Anshul</p><p style="font-weight:700;color:var(--ink)">4 December 2026</p></footer>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+ <linearGradient id="gg" x2="0" y2="1"><stop offset="0" stop-color="#f3d78e"/><stop offset="1" stop-color="#c8963e"/></linearGradient>
+ <linearGradient id="cg" x2="0" y2="1"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#fbeed6"/></linearGradient>
+ <path id="lf" d="M0 0C6-5 16-5 24 0C16 5 6 5 0 0z"/>
+ <path id="fr" d="M0 0C14-18 40-22 62-6C42-10 22-6 0 0z"/>
+ <g id="rs"><circle r="10" fill="currentColor"/><circle r="7.5" fill="#fff" fill-opacity=".18"/><path d="M-7 1a7 7 0 0 1 14 0M-5 4a5 5 0 0 0 10 0M-4-2a4 4 0 0 1 8 0M-1.5 0a1.5 1.5 0 0 1 3 0" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.1"/><circle r="10" fill="none" stroke="#a02b5c" stroke-opacity=".4"/></g>
+ <g id="pm"><path d="M0 0C6-40 2-80 10-120" stroke="#a08560" stroke-width="7" fill="none" stroke-linecap="round"/><g transform="translate(10 -120)"><use href="#fr" transform="rotate(-165)" fill="#6f9a4a"/><use href="#fr" transform="rotate(-130)" fill="#88ad5a"/><use href="#fr" transform="rotate(-95)" fill="#6f9a4a"/><use href="#fr" transform="rotate(-55)" fill="#88ad5a"/><use href="#fr" transform="rotate(-20)" fill="#6f9a4a"/><use href="#fr" transform="rotate(20)" fill="#88ad5a"/><use href="#fr" transform="rotate(160)" fill="#6f9a4a"/></g></g>
+ <g id="fl"><ellipse cy="-5" rx="2.8" ry="4.8"/><ellipse cy="-5" rx="2.8" ry="4.8" transform="rotate(72)"/><ellipse cy="-5" rx="2.8" ry="4.8" transform="rotate(144)"/><ellipse cy="-5" rx="2.8" ry="4.8" transform="rotate(216)"/><ellipse cy="-5" rx="2.8" ry="4.8" transform="rotate(288)"/><circle r="2" fill="#7a1c33"/></g>
+ <g id="ic-c"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01" /></g>
+ <g id="ic-t"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></g>
+ <g id="ic-p"><path d="M12 21s6.5-6 6.5-11a6.5 6.5 0 0 0-13 0c0 5 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.4"/></g>
+ <g id="ic-m"><rect x="7" y="3" width="10" height="17" rx="5"/><path d="M12 7v4"/></g>
+ <path id="ic-v" d="M5 9l7 7 7-7"/>
+</defs></svg>
+
+<script>
+const $=s=>document.querySelector(s),H=document.documentElement,app=$('#app');
+/* ---- MY DATA (copied exactly) ---- */
+const EV=[["Mehndi","25 Nov 2026","Wednesday","8:00 PM","2026-11-25T20:00:00+05:30"],["Haldi","26 Nov 2026","Thursday","11:00 AM","2026-11-26T11:00:00+05:30"],["Wedding","4 Dec 2026","Friday","8:00 PM","2026-12-04T20:00:00+05:30"],["Reception","6 Dec 2026","Sunday","7:30 PM","2026-12-06T19:30:00+05:30"]];
+const V="The Leela Palace Udaipur",A="Ambamata Udaipur";
+const MAP="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("The Leela Palace Udaipur Lake Pichola, Lakeside Modern Palace Hotel, Pichola, Udaipur, Rajasthan, India");
+document.querySelectorAll('[data-m]').forEach(a=>{a.href=MAP;a.target='_blank';a.rel='noopener'});
+const FI='<svg class="fi" viewBox="-9 -9 18 18"><use href="#fl"/></svg>';
+document.querySelectorAll('.pill[data-p]').forEach(p=>p.innerHTML=FI+p.dataset.p+FI);
+
+/* ---- artwork helpers (seeded, so it never changes) ---- */
+let sd=7;const R=()=>(sd=sd*16807%2147483647)/2147483647;
+const RC=['#e8689b','#f08fb1','#d94a84','#f4a6c0','#f08aa6'],LC=['#5f8f3f','#7aa650','#4f7d3a'];
+const fc=(n,x,y,w,h)=>{let s='';for(let i=0;i<n*1.6;i++)s+=`<use href="#lf" transform="translate(${x+R()*w} ${y+R()*h}) rotate(${R()*360|0}) scale(${.8+R()*.9})" fill="${LC[R()*3|0]}"/>`;for(let i=0;i<n;i++)s+=`<use href="#rs" transform="translate(${x+R()*w} ${y+R()*h}) scale(${.7+R()*.7})" style="color:${RC[R()*5|0]}"/>`;return s};
+const bz=(t,p)=>{const u=1-t;return[u*u*u*p[0]+3*u*u*t*p[2]+3*u*t*t*p[4]+t*t*t*p[6],u*u*u*p[1]+3*u*u*t*p[3]+3*u*t*t*p[5]+t*t*t*p[7]]};
+const vine=(x,y,n)=>{let s=`<path d="M${x} ${y}c3 ${n/3} -3 ${n*2/3} 0 ${n}" stroke="#5f8f3f" stroke-width="1.4" fill="none"/>`;for(let i=1;i<n/11;i++)s+=`<use href="#lf" transform="translate(${x} ${y+i*11}) rotate(${i%2?-65:65}) scale(.55)" fill="${LC[i%3]}"/>`;return s};
+const bell=(x,a,b)=>`<g class="sw"><path d="M${x} ${a}V${b}" stroke="#c8963e"/><path d="M${x} ${b}c-9 0-13 14-15 24h30c-2-10-6-24-15-24z" fill="url(#gg)" stroke="#9a6d20" stroke-width=".8"/><circle cx="${x}" cy="${b+27}" r="3" fill="#9a6d20"/></g>`;
+const gz=(x,y)=>`<g transform="translate(${x} ${y})" stroke="#d3b27c"><path d="M-30-110C-30-140-14-158 0-164 14-158 30-140 30-110z" fill="#f2dfc2"/><path d="M0-164v-14" stroke-width="2"/><circle cy="-180" r="3" fill="#d4a649"/><rect x="-34" y="-110" width="68" height="14" fill="#efd9b8"/><rect x="-30" y="-96" width="60" height="70" fill="#f6e9d2"/><path d="M-26-30v-34a8 8 0 0 1 16 0v34zM-8-30v-34a8 8 0 0 1 16 0v34zM10-30v-34a8 8 0 0 1 16 0v34z" fill="#e2c9a0" stroke="none"/><rect x="-36" y="-26" width="72" height="8" fill="#efd9b8"/><rect x="-36" y="-18" width="72" height="18" fill="#f2dfc2"/></g>`;
+const pk=(x,y,s)=>`<g transform="translate(${x} ${y}) scale(${s})"><path d="M0 0C-26 30-56 80-44 150C-24 126-6 70 6 10z" fill="#1f8a5c" stroke="#c9a64a" stroke-width="1.5"/><g fill="#2d6bb5" stroke="#d4a649"><circle cx="-38" cy="118" r="5"/><circle cx="-28" cy="92" r="4.5"/><circle cx="-18" cy="66" r="4"/></g><ellipse cx="6" cy="-2" rx="11" ry="21" transform="rotate(14 6 -2)" fill="#17708f"/><path d="M10-18C18-36 12-52 20-60" stroke="#17708f" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="21" cy="-63" r="5.5" fill="#1f5fa8"/><path d="M26-63l7 2-7 2M18-68l-2-7M22-69v-8" stroke="#1f5fa8" fill="none"/></g>`;
+const art=()=>{const P=[-4,190,6,96,66,34,156,-8];
+ let s=`<path d="M-4 190C6 96 66 34 156-8L196-8C112 30 54 92 30 205z" fill="#fff8ea" stroke="#d4a649" stroke-width="2"/><path d="M-4 190C6 96 66 34 156-8" fill="none" stroke="#e8cd92" stroke-width="2" transform="translate(12 6)"/>`;
+ for(let i=0;i<7;i++){const p=bz(.1+i*.13,P);s+=vine(p[0]+R()*8,p[1]+8,50+R()*130)}
+ s+=bell(150,60,170)+bell(34,150,235)+gz(80,485)+pk(112,418,.95)+`<use href="#pm" transform="translate(205 500) scale(1.3)"/><use href="#pm" transform="translate(252 490) scale(.85)"/>`+fc(14,0,430,160,100)+fc(8,-10,200,70,230);
+ for(let i=0;i<13;i++){const p=bz(i/12,P);s+=`<use href="#lf" transform="translate(${p[0]} ${p[1]}) rotate(${R()*360|0}) scale(1.3)" fill="${LC[i%3]}"/><use href="#rs" transform="translate(${p[0]+R()*10-2} ${p[1]+R()*10}) scale(${1+R()*.5})" style="color:${RC[R()*5|0]}"/>`}
+ return s};
+$('#hl').innerHTML=art();sd=99;$('#hr').innerHTML=art();
+function side(){document.querySelectorAll('.sd2').forEach((el,k)=>{sd=11+k*5;let s='';for(let i=0,n=Math.ceil(el.clientHeight/420)+1;i<n;i++)s+=`<svg width="150" height="420" viewBox="0 0 150 420">${fc(7,-10,10,100,380)}${i%2?'<use href="#pm" transform="translate(50 400) scale(1.15)"/>':''}${fc(3,-10,10,60,380)}</svg>`;el.innerHTML=s})}
+side();addEventListener('load',side);let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(side,200)});
+document.querySelectorAll('[data-cc]').forEach((e,k)=>{sd=40+k;e.insertAdjacentHTML('beforeend',`<svg class="cc l" viewBox="0 0 90 60">${fc(4,0,10,60,40)}</svg><svg class="cc r" viewBox="0 0 90 60">${fc(4,0,10,60,40)}</svg>`)});
+sd=3;for(let i=0;i<24;i++){const d=document.createElement('i'),z=3+R()*7;d.className='bk2';d.style.cssText=`left:${R()*100}%;top:${R()*100}%;width:${z}px;height:${z}px;animation-delay:${-R()*4}s`;app.append(d)}
+/* cursor-safe parallax on corner artwork (35%) */
+const has=document.querySelectorAll('.ha');let tk=0;
+addEventListener('scroll',()=>{if(!tk){tk=1;requestAnimationFrame(()=>{has.forEach(h=>h.style.transform=`translateY(${scrollY*.35}px)`);tk=0})}},{passive:true});
+
+/* ---- events ---- */
+const eventPhotos=[
+ {src:'images/mehndi-ceremony.jpg',alt:'Intricate henna designs at an Indian wedding',page:'https://commons.wikimedia.org/wiki/File:Henna_tattoo_(Mehndi)_at_a_wedding_in_India_01.jpg',author:'Kritzolina'},
+ {src:'images/haldi-ceremony.jpg',alt:'Family gathered at a traditional haldi ceremony',page:'https://commons.wikimedia.org/wiki/File:Haldi_Ceremony_in_a_Bengali_Wedding_05.jpg',author:'Goutam1962'},
+ {src:'images/baraat-dance.jpg',alt:'Guests dancing in a lively Indian wedding baraat',page:'https://commons.wikimedia.org/wiki/File:Baraat_Dance.jpg',author:'03Ani03'},
+ {src:'images/sangeet-celebration.jpg',alt:'Musicians performing at an Indian wedding sangeet',page:'https://commons.wikimedia.org/wiki/File:Indian_wedding_sangeet.jpg',author:'03Ani03'}
+];
+$('#evs').innerHTML=EV.map((e,i)=>`<article class="arc ec rv"><div class="ci"><img class="ei" src="${eventPhotos[i].src}" alt="${eventPhotos[i].alt}" loading="lazy" decoding="async"><h3>${e[0]}</h3><p class="d">${e[1]}</p><p>${e[2]}</p><p>${e[3]}</p><p class="i">${V}</p><small class="photo-credit">Photo: <a href="${eventPhotos[i].page}" target="_blank" rel="noopener noreferrer">${eventPhotos[i].author}</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></small></div></article>`).join('');
+
+/* arch frames (one shape drives both the clip and the gold outline) */
+const AR="M0 1V.3C0 .21 .05 .16 .15 .125C.3 .075 .43 .05 .5 0C.57 .05 .7 .075 .85 .125C.95 .16 1 .21 1 .3V.96Q1 1 .96 1H.04Q0 1 0 .96Z";
+const FO=f=>`<svg class="fo" viewBox="0 0 1 1" preserveAspectRatio="none"><path d="${AR}" fill="${f?'url(#cg)':'none'}" stroke="#d4a649" stroke-width="2.5" vector-effect="non-scaling-stroke"/><path d="${AR}" transform="translate(.5 .5) scale(.945) translate(-.5 -.5)" fill="none" stroke="#e8cd92" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>`;
+document.body.insertAdjacentHTML('beforeend',`<svg width="0" height="0" style="position:absolute"><clipPath id="ar" clipPathUnits="objectBoundingBox"><path d="${AR}"/></clipPath></svg>`);
+document.querySelectorAll('.ec').forEach(a=>a.insertAdjacentHTML('afterbegin',FO(1)));
+document.querySelectorAll('.pc,.ph').forEach(a=>a.insertAdjacentHTML('beforeend',FO(0)));
+sd=61;document.querySelectorAll('.pc').forEach((a,k)=>a.insertAdjacentHTML('beforeend',`<svg class="cf" style="${k?'right':'left'}:-12%${k?';scale:-1 1':''}" viewBox="0 0 80 80">${fc(5,0,10,60,60)}</svg>`));
+
+/* ---- calendar (.ics) ---- */
+$('#ics').onclick=()=>{const z=d=>new Date(d).toISOString().replace(/[-:]|\.\d{3}/g,'');
+ const s=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Invitation//EN',...EV.flatMap((e,i)=>['BEGIN:VEVENT','UID:ev'+i+'@priyanka-anshul','DTSTAMP:'+z(Date.now()),'DTSTART:'+z(e[4]),'SUMMARY:'+e[0]+' - Priyanka & Anshul','LOCATION:'+V+'\\, '+A,'END:VEVENT']),'END:VCALENDAR'].join('\r\n');
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([s],{type:'text/calendar'}));a.download='Priyanka-Anshul-Wedding.ics';document.body.append(a);a.click();a.remove()};
+
+/* ---- countdown: Haldi first, then Wedding, then Just Married (fixed +05:30) ---- */
+const T=[EV[1],EV[2]],cn=$('#cn');
+cn.innerHTML=['Days','Hours','Minutes','Seconds'].map(l=>`<div><b>00</b><span>${l}</span></div>`).join('');
+const nb=cn.querySelectorAll('b');
+function tick(){const n=Date.now(),t=T.find(e=>new Date(e[4])>n);
+ if(!t){cn.className='cn jm';cn.textContent='Just Married';$('#cl').parentNode.remove();$('#cs').textContent='';clearInterval(iv);return}
+ $('#cl').innerHTML=FI+t[0]+' Countdown'+FI;$('#cs').textContent=t[2]+', '+t[1]+', '+t[3];
+ const s=Math.floor((new Date(t[4])-n)/1e3),v=[s/86400|0,s%86400/3600|0,s%3600/60|0,s%60];
+ nb.forEach((b,i)=>b.textContent=String(v[i]).padStart(2,'0'))}
+tick();const iv=setInterval(tick,1000);
+
+/* scroll reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v2');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+
+/* ---- envelope opening: tap / click / Enter / Space ---- */
+const env=$('#env');let op=0;
+function burst(){const e=$('.ep');for(let i=0;i<36;i++){const s=document.createElement('span'),a=Math.random()*6.283,d=70+Math.random()*190;s.style.cssText=`--x:${Math.cos(a)*d}px;--y:${Math.sin(a)*d}px;animation-delay:${Math.random()*.15}s`;e.append(s)}}
+function open(){if(op)return;op=1;env.classList.add('glow');
+ setTimeout(()=>env.classList.add('ring'),250);
+ setTimeout(()=>{env.classList.add('open');burst()},600);
+ setTimeout(()=>env.classList.add('flash'),1050);
+ setTimeout(()=>{env.classList.add('done');H.classList.remove('lock');document.body.classList.add('go')},1450);
+ setTimeout(()=>env.remove(),2300)}
+$('#sl').onclick=open;env.onclick=open;
+addEventListener('keydown',e=>{if(!op&&(e.key=='Enter'||e.key==' ')){e.preventDefault();open()}});
+$('#sl').focus({preventScroll:true});
+
+/* ---- glow behind the cursor + candle-spark trail (mouse and touch) ---- */
+const cv=$('#tr'),c=cv.getContext('2d'),P=[];let lx=-1,ly=0,mx=0,my=0,hx=-99,hy=0,ha=0,on=0;
+const rz=()=>{const d=devicePixelRatio||1;cv.width=innerWidth*d;cv.height=innerHeight*d;c.setTransform(d,0,0,d,0,0)};rz();addEventListener('resize',rz);
+const mv=(x,y)=>{if(lx<0){lx=x;ly=y}if(hx<-50){hx=x;hy=y}const dx=x-lx,dy=y-ly,n=Math.min(8,1+(Math.hypot(dx,dy)/9|0));
+ for(let i=1;i<=n;i++)P.push({x:lx+dx*i/n+(Math.random()-.5)*6,y:ly+dy*i/n+(Math.random()-.5)*6,r:7+Math.random()*10,l:1,vx:(Math.random()-.5)*.35,vy:-.15-Math.random()*.45});
+ lx=x;ly=y;mx=x;my=y;on=1};
+addEventListener('pointermove',e=>{if(e.pointerType!='touch')mv(e.clientX,e.clientY)});
+addEventListener('touchstart',e=>{lx=hx=e.touches[0].clientX;ly=hy=e.touches[0].clientY;mx=lx;my=ly;on=1},{passive:true});
+addEventListener('touchmove',e=>mv(e.touches[0].clientX,e.touches[0].clientY),{passive:true});
+addEventListener('touchend',()=>on=0);document.addEventListener('mouseleave',()=>on=0);
+const glow=(x,y,r,a,k)=>{const g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,`rgba(255,${k?236:214},${k?170:120},${a*.75})`);g.addColorStop(.4,`rgba(255,176,64,${a*.38})`);g.addColorStop(1,'rgba(255,150,40,0)');c.fillStyle=g;c.beginPath();c.arc(x,y,r,0,7);c.fill()};
+function f(t){c.clearRect(0,0,innerWidth,innerHeight);
+ for(let i=P.length;i--;){const p=P[i];p.l-=.02;if(p.l<=0){P.splice(i,1);continue}p.x+=p.vx;p.y+=p.vy;glow(p.x,p.y,p.r*(.5+p.l*.7),p.l*(.8+.2*Math.sin(t/60+i)))}
+ ha+=((on?1:0)-ha)*.12;hx+=(mx-hx)*.3;hy+=(my-hy)*.3;
+ if(ha>.02){const q=ha*(.85+.15*Math.sin(t/70));glow(hx,hy,56+4*Math.sin(t/90),q*.7);glow(hx,hy,20,q,1);
+  c.fillStyle=`rgba(255,252,232,${ha*.9})`;c.beginPath();c.moveTo(hx,hy-10);c.lineTo(hx+2.2,hy-2.2);c.lineTo(hx+10,hy);c.lineTo(hx+2.2,hy+2.2);c.lineTo(hx,hy+10);c.lineTo(hx-2.2,hy+2.2);c.lineTo(hx-10,hy);c.lineTo(hx-2.2,hy-2.2);c.fill()}
+ requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)requestAnimationFrame(f);
+</script>
+</body>
+</html>

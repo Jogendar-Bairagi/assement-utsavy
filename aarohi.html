@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aarohi & Kabir – Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#641C32;--ivory:#F8F1E7;--gold:#C6A46A;--rose:#D9A6A0;--brown:#38251F;color-scheme:light;
+--serif:'Cormorant Garamond',Georgia,serif;--script:'Great Vibes','Brush Script MT',cursive;--ui:'DM Sans',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px;height:100%}
+body{background:var(--ivory);color:var(--brown);font:16px/1.7 var(--ui);overflow-x:hidden}
+body.lock{overflow:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05}
+.script{font-family:var(--script);font-weight:400}
+a{color:inherit}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.paper{background:var(--ivory) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* nav */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:14px 24px;color:var(--ivory);mix-blend-mode:normal;background:linear-gradient(var(--wine),transparent)}
+nav .m{font:1.6rem var(--script)}nav div{display:flex;gap:22px;font-size:.85rem}
+nav a{text-decoration:none;opacity:.85;transition:opacity .3s,color .3s}nav a:hover{opacity:1;color:var(--gold)}
+@media(max-width:640px){nav .hide{display:none}}
+/* envelope */
+#env{position:fixed;inset:0;z-index:60;background:var(--wine);display:grid;place-items:center;overflow:hidden}
+#env .bgp{position:absolute;inset:0;opacity:.35}
+.eb{position:relative;width:min(86vw,520px);aspect-ratio:4/3;perspective:1200px}
+.eb>*{position:absolute}
+.eb .body{inset:0;background:var(--ivory);box-shadow:0 40px 80px rgba(0,0,0,.45);border-radius:3px}
+.eb .card{left:7%;right:7%;top:8%;bottom:8%;background:var(--ivory);border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-7px;display:grid;place-items:center;text-align:center;color:var(--wine);z-index:2;padding:14px}
+.eb .card .script{font-size:clamp(2rem,9vw,3.4rem)}
+.eb .pocket{inset:0;z-index:3;background:linear-gradient(35deg,#efe3d2 49.6%,transparent 50%),linear-gradient(-35deg,#efe3d2 49.6%,transparent 50%);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);pointer-events:none}
+.eb .pocket::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(100,28,50,.08),transparent 60%)}
+.eb .flap{left:0;right:0;top:0;height:60%;z-index:4;transform-origin:top;background:linear-gradient(#f3e8d8,#e9dcc7);clip-path:polygon(0 0,100% 0,50% 100%);filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.eb .bord{inset:10px;border:1px solid var(--gold);z-index:5;pointer-events:none;opacity:.7}
+.seal{left:50%;top:60%;width:76px;height:76px;margin:-38px 0 0 -38px;z-index:6;border:0;border-radius:50% 46% 52% 48%;cursor:pointer;color:var(--wine);font:600 1.5rem var(--serif);
+background:radial-gradient(circle at 35% 30%,#e6c98f,var(--gold) 55%,#8e6d36);box-shadow:0 5px 14px rgba(0,0,0,.45),inset 0 0 0 4px rgba(100,28,50,.18)}
+.env-txt{position:absolute;left:0;right:0;bottom:7vh;text-align:center;color:var(--ivory)}
+.env-txt p{font:italic 1.3rem var(--serif);color:var(--rose)}
+.env-txt button{margin-top:10px;background:none;border:1px solid var(--gold);color:var(--gold);padding:12px 30px;font:500 .8rem var(--ui);letter-spacing:.3em;cursor:pointer;transition:.3s}
+.env-txt button:hover{background:var(--gold);color:var(--wine)}
+.fl{position:absolute;width:150px;opacity:.9}
+/* hero */
+.hero{position:relative;min-height:100svh;background:var(--wine);color:var(--ivory);display:grid;place-items:center;text-align:center;overflow:hidden;padding:110px 20px 70px}
+.hero .arch{position:absolute;left:50%;top:50%;width:min(88vw,560px);transform:translate(-50%,-50%);opacity:.9}
+.hero .in{position:relative}
+.hero .tag{font:italic 1.35rem var(--serif);color:var(--rose)}
+.hero h1{font-family:var(--script);font-size:clamp(4.2rem,17vw,9.5rem);line-height:.95;margin:8px 0}
+.hero .amp{display:block;font:italic 2.4rem var(--serif);color:var(--gold);margin:-6px 0}
+.hero .dt{margin-top:26px;font:500 1.15rem var(--serif);letter-spacing:.22em}
+/* letter */
+.letter{padding:120px 0}
+.sheet{max-width:640px;margin:0 auto;padding:64px 40px;text-align:center;border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-10px;background:rgba(255,255,255,.35);box-shadow:0 30px 60px -30px rgba(56,37,31,.25)}
+.sheet .blessing{font:1.5rem var(--serif);color:var(--gold)}
+.sheet p{font:1.35rem/1.75 var(--serif);margin:18px auto;max-width:34ch}
+.sheet .fam{font:italic 1.2rem var(--serif);color:var(--wine)}
+.sheet .script{font-size:3rem;color:var(--wine)}
+.sep{display:block;margin:24px auto}
+/* events */
+.events{padding:40px 0 100px}
+.events h2{text-align:center;font-size:clamp(2.6rem,8vw,4.6rem);color:var(--wine);margin-bottom:70px}
+.ev{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:110px}
+.ev:nth-child(odd) .event-visual{order:2}.ev:nth-child(even){transform:translateX(0)}
+.ev:nth-child(3){grid-template-columns:5fr 4fr}.ev:nth-child(4){grid-template-columns:4fr 5fr}
+.art{position:relative;aspect-ratio:3/4;max-width:340px;width:100%;margin:0 auto}
+.art img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .8s ease}
+.art:hover img{transform:scale(1.03)}
+.event-visual{max-width:340px;width:100%;margin:0 auto}
+.photo-credit{display:block;margin-top:8px;font: .72rem/1.5 var(--ui);text-align:center}
+.photo-credit a{color:inherit}
+.ev h3{font-size:clamp(2.6rem,7vw,4rem);color:var(--wine)}
+.ev h3 i{display:block;font:1.8rem var(--script);color:var(--gold);font-style:normal;margin-bottom:6px}
+.ev dl{margin:20px 0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:.95rem;border-left:2px solid var(--gold);padding-left:18px}
+.ev dt{color:var(--gold);font-weight:500}.ev p{max-width:40ch}
+@media(max-width:780px){.ev,.ev:nth-child(n){grid-template-columns:1fr;gap:28px;margin-bottom:80px}.ev:nth-child(odd) .event-visual{order:0}}
+/* countdown */
+.cd{background:var(--brown);color:var(--ivory);text-align:center;padding:90px 20px;position:relative;overflow:hidden}
+.cd h2{font:1.8rem var(--script);color:var(--gold);font-size:2.6rem;margin-bottom:28px}
+.cd .row{display:flex;justify-content:center;gap:clamp(10px,4vw,48px)}
+.cd .c{min-width:62px}.cd b{display:block;font:500 clamp(3rem,13vw,6.5rem)/1 var(--serif)}
+.cd span{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose)}
+.cd .c+.c{border-left:1px solid rgba(198,164,106,.4);padding-left:clamp(10px,4vw,48px)}
+/* venue */
+.venue{background:var(--wine);color:var(--ivory);padding:100px 0 0;text-align:center;position:relative}
+.venue h2{font:clamp(3rem,10vw,5.5rem) var(--script);color:var(--gold)}
+.venue h3{font-size:clamp(1.9rem,6vw,2.8rem);margin:14px 0 6px}
+.venue address{font-style:normal;color:var(--rose);margin-bottom:26px}
+.btn{display:inline-flex;gap:10px;align-items:center;padding:14px 34px;border:1px solid var(--gold);color:var(--gold);background:none;text-decoration:none;font:500 .8rem var(--ui);letter-spacing:.25em;text-transform:uppercase;cursor:pointer;transition:.35s}
+.btn:hover{background:var(--gold);color:var(--wine)}.btn i{font-style:normal;transition:transform .3s}.btn:hover i{transform:translateX(6px)}
+.btn.s{background:var(--wine);color:var(--ivory);border-color:var(--wine)}.btn.s:hover{background:var(--brown);border-color:var(--brown);color:var(--ivory)}
+.pal{display:block;width:min(100%,900px);margin:60px auto 0}
+.pal img{display:block;width:100%;height:auto}
+.pal .photo-credit{padding:0 12px 12px;color:var(--ivory)}
+/* rsvp */
+.rsvp{padding:110px 0}
+.rsvp .box{max-width:560px;margin:0 auto;padding:56px 36px;border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-10px;text-align:center}
+.rsvp h2{font:3.2rem var(--script);color:var(--wine)}.rsvp .sub{font:italic 1.2rem var(--serif);margin-bottom:28px}
+form{display:grid;gap:18px;text-align:left}
+label{font-size:.82rem;color:var(--wine);font-weight:500}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px 2px;background:none;border:0;border-bottom:1px solid var(--gold);font:inherit;color:var(--brown);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom:2px solid var(--wine)}
+.err{color:#9b2335;font-size:.8rem;min-height:1.1em;display:block}
+.seg{display:flex;gap:10px;margin-top:8px}.seg label{flex:1;margin:0}
+.seg input{position:absolute;opacity:0;width:0}
+.seg span{display:block;text-align:center;padding:12px 6px;border:1px solid var(--gold);cursor:pointer;transition:.3s;color:var(--brown)}
+.seg input:checked+span{background:var(--wine);color:var(--ivory);border-color:var(--wine)}
+.seg input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.ok{display:none}.ok .script{font-size:3.4rem;color:var(--wine)}.ok p{font:1.3rem var(--serif);margin:10px 0 22px}
+/* final */
+.fin{background:var(--wine);color:var(--ivory);text-align:center;padding:130px 20px 70px;position:relative;overflow:hidden}
+.fin q{display:block;font:italic clamp(1.6rem,5vw,2.4rem)/1.4 var(--serif);max-width:22ch;margin:0 auto 36px;quotes:none}
+.fin h2{font:clamp(3.4rem,13vw,7rem)/1 var(--script);color:var(--gold)}
+.fin .d{margin-top:20px;letter-spacing:.3em;font:500 1rem var(--serif)}
+.fin small{display:block;margin-top:60px;color:var(--rose)}
+.petal{position:fixed;top:-30px;z-index:20;pointer-events:none;width:12px;height:16px;border-radius:70% 0 70% 0;background:var(--rose);opacity:.55;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(70px,110vh) rotate(540deg)}}
+.fl-r{position:absolute;opacity:.5;width:min(34vw,220px)}
+/* Rajasthani palace layer */
+.cur{position:relative;overflow:hidden}
+.cp{position:absolute;top:0;bottom:0;width:50.5%;z-index:5;background:repeating-linear-gradient(90deg,#4a1122 0 10px,#7a2842 22px,#4a1122 34px);box-shadow:inset 0 0 40px rgba(0,0,0,.55);will-change:transform}
+.cp.l{left:0;transform-origin:left;border-right:3px solid var(--gold)}
+.cp.r{right:0;transform-origin:right;border-left:3px solid var(--gold)}
+.cp::after{content:"";position:absolute;bottom:0;left:0;right:0;height:16px;background:radial-gradient(circle at 50% 0,var(--gold) 5px,transparent 6px) 0 0/16px 16px}
+.mc{position:fixed;inset:0;z-index:55;pointer-events:none;background:transparent}
+.mc .cp{width:50.4%}
+.mc .val{position:absolute;top:0;left:0;right:0;height:62px;z-index:6;background:linear-gradient(var(--wine),#4a1122);border-bottom:4px solid var(--gold);box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.tor{position:absolute;top:52px;left:0;width:100%;height:auto;transform-origin:50% 0;animation:sway 6s ease-in-out infinite alternate;z-index:1}
+@keyframes sway{to{transform:skewX(1.4deg)}}
+.lamp{position:absolute;top:50px;transform-origin:50% 0;animation:swing 4.5s ease-in-out infinite alternate;z-index:1}
+.lamp.a{left:5%}.lamp.b{right:5%;animation-delay:-2.2s}
+@keyframes swing{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+.fm{transform-box:fill-box;transform-origin:center bottom;animation:fk 1.2s ease-in-out infinite alternate}
+@keyframes fk{to{opacity:.55;transform:scale(1.25,.85)}}
+.hero .in{z-index:2}
+.hero h1{background:linear-gradient(100deg,#F8F1E7 35%,#E8CB8F 50%,#F8F1E7 65%) 0 0/250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 7s linear infinite}
+.hero h1 .amp{-webkit-text-fill-color:var(--gold)}
+@keyframes shine{to{background-position:-250% 0}}
+.letter{position:relative}
+.letter::before,.cd::before,.fin::before{content:"";position:absolute;top:0;left:0;right:0;height:26px;z-index:2;background:radial-gradient(circle at 50% 0,var(--wine) 68%,transparent 70%) 0 0/52px 26px repeat-x}
+.cd::before,.fin::before{background:radial-gradient(circle at 50% 0,var(--ivory) 68%,transparent 70%) 0 0/52px 26px repeat-x}
+@media(prefers-reduced-motion:reduce){.cp,.mc{display:none}*{animation:none!important}}
+@media(prefers-reduced-motion:reduce){.petal{display:none}html{scroll-behavior:auto}*{transition-duration:.01s!important}}
+</style></head>
+<body class="lock"><div id="root"></div>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  // alert("helo")
+const {useState,useEffect,useRef}=React, html=htm.bind(React.createElement);
+/* ===== EDIT YOUR DETAILS HERE ===== */
+const W={bride:'Aarohi',groom:'Kabir',date:'2027-02-06T18:00:00+05:30',dateText:'6 February 2027',
+ venue:'The Royal Heritage Palace',addr:'Rajwada Road, Indore, Madhya Pradesh 452001',
+ mapQ:'Rajwada Palace Indore',whatsapp:'919999999999',
+ events:[
+ {k:'haldi',t:'Haldi',s:'Golden mornings',d:'3 February 2027',h:'11:00 am',v:'Courtyard, Heritage Palace',p:'Turmeric, marigolds and laughter. Come dressed in yellow and be ready to be playfully painted gold.'},
+ {k:'mehndi',t:'Mehndi',s:'Henna and stories',d:'3 February 2027',h:'5:00 pm',v:'Palace Gardens',p:'An evening on the lawn with intricate henna, chai and old family stories as the light fades.'},
+ {k:'sangeet',t:'Sangeet',s:'A night of song',d:'4 February 2027',h:'7:30 pm',v:'Durbar Hall',p:'Performances, music and dancing late into the night. Bring your best moves.'},
+ {k:'wedding',t:'Wedding',s:'Seven promises',d:'6 February 2027',h:'6:00 pm',v:'Mandap Lawn, Heritage Palace',p:'The baraat arrives, the families meet and the seven pheras begin. Dinner follows.'}]};
+const Jaali=({id='j',o=.3})=>html`<svg width="0" height="0" style=${{position:'absolute'}}><defs><pattern id=${id} width="36" height="36" patternUnits="userSpaceOnUse"><path d="M18 2L34 18L18 34L2 18Z M18 10L26 18L18 26L10 18Z" fill="none" stroke="#C6A46A" stroke-width=".8" opacity=${o}/><circle cx="18" cy="18" r="2" fill="#C6A46A" opacity=${o}/></pattern></defs></svg>`;
+const Lotus=({w=60,c='#C6A46A',cls='sep'})=>html`<svg class=${cls} width=${w} viewBox="-40 -30 80 50" fill="none" stroke=${c} stroke-width="1.2" aria-hidden="true">${[-60,-30,0,30,60].map(r=>html`<path key=${r} d="M0 14C-9 2 -9 -14 0 -26C9 -14 9 2 0 14Z" transform=${'rotate('+r+' 0 14)'}/>`)}<path d="M-36 16H36" opacity=".6"/></svg>`;
+const Flower=({s=150,style,cls='fl'})=>html`<svg class=${cls} style=${style} width=${s} viewBox="-50 -50 100 100" fill="none" stroke="#C6A46A" stroke-width="1" aria-hidden="true">${[0,45,90,135,180,225,270,315].map(r=>html`<path key=${r} d="M0 0C-12-14-12-34 0-46C12-34 12-14 0 0Z" fill="#D9A6A0" fill-opacity=".25" transform=${'rotate('+r+')'}/>`)}<circle r="6" fill="#C6A46A"/></svg>`;
+const archPath='M20 360V130C20 50 100 8 150 8S280 50 280 130V360Z';
+const eventPhotos={
+ haldi:{src:'images/haldi-ceremony.jpg',alt:'Family gathered at a traditional haldi ceremony',page:'https://commons.wikimedia.org/wiki/File:Haldi_Ceremony_in_a_Bengali_Wedding_05.jpg',author:'Goutam1962'},
+ mehndi:{src:'images/mehndi-ceremony.jpg',alt:'Intricate henna designs at an Indian wedding',page:'https://commons.wikimedia.org/wiki/File:Henna_tattoo_(Mehndi)_at_a_wedding_in_India_01.jpg',author:'Kritzolina'},
+ sangeet:{src:'images/sangeet-celebration.jpg',alt:'Musicians performing at an Indian wedding sangeet',page:'https://commons.wikimedia.org/wiki/File:Indian_wedding_sangeet.jpg',author:'03Ani03'},
+ wedding:{src:'images/baraat-dance.jpg',alt:'Guests dancing in a lively Indian wedding baraat',page:'https://commons.wikimedia.org/wiki/File:Baraat_Dance.jpg',author:'03Ani03'}
+};
+const Art=({k})=>{const photo=eventPhotos[k];
+ return html`<figure class="event-visual"><${Curtain} cls="art"><img src=${photo.src} alt=${photo.alt} loading="lazy" decoding="async"/><//>
+  <figcaption class="photo-credit">Photo: <a href=${photo.page} target="_blank" rel="noopener noreferrer">${photo.author}</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></figcaption>
+ </figure>`};
+const Palace=()=>html`<figure class="pal"><img src="images/indore-rajwada.jpg" alt="Rajwada Palace in Indore" loading="lazy" decoding="async"/>
+ <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Indore_Rajwada01.jpg" target="_blank" rel="noopener noreferrer">DeepakNigam</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></figcaption>
+ </figure>`;
+const Curtain=({cls,children})=>{const r=useRef();
+ useEffect(()=>{if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;gsap.registerPlugin(ScrollTrigger);const el=r.current;
+  const t=gsap.timeline({scrollTrigger:{trigger:el,start:'top 80%'},defaults:{duration:1.7,ease:'power3.inOut'}});
+  t.to(el.querySelector('.cp.l'),{scaleX:.07}).to(el.querySelector('.cp.r'),{scaleX:.07},0).set(el.querySelectorAll('.cp'),{display:'none'});
+  return()=>{t.scrollTrigger&&t.scrollTrigger.kill();t.kill()}},[]);
+ return html`<div class=${'cur '+cls} ref=${r}>${children}<div class="cp l" aria-hidden="true"></div><div class="cp r" aria-hidden="true"></div></div>`};
+const MainCurtain=()=>{const r=useRef();
+ useEffect(()=>{const q=s=>r.current.querySelector(s);if(matchMedia('(prefers-reduced-motion:reduce)').matches){r.current.style.display='none';return}
+  const t=gsap.timeline({delay:.5,defaults:{duration:2.7,ease:'power3.inOut'},onComplete:()=>{r.current.style.display='none'}});
+  t.to(q('.cp.l'),{scaleX:.14}).to(q('.cp.r'),{scaleX:.14},0).to(q('.val'),{yPercent:-110,duration:1,ease:'power2.in'},'-=.5');return()=>t.kill()},[]);
+ return html`<div class="mc" ref=${r} aria-hidden="true"><div class="cp l"></div><div class="cp r"></div><div class="val"></div></div>`};
+const Torana=()=>{const d=[];for(let s=0;s<4;s++){const a=s*250;for(let i=1;i<12;i++){const t=i/12;d.push([(1-t)*(1-t)*a+2*(1-t)*t*(a+125)+t*t*(a+250),2*(1-t)*t*100,(i+s)%3])}}
+ return html`<svg class="tor" viewBox="0 0 1000 120" aria-hidden="true">${d.map(([x,y,c],i)=>html`<circle key=${i} cx=${x} cy=${y+8} r="7" fill=${['#E08A2E','#D9A6A0','#C6A46A'][c]}/>`)}${[0,250,500,750,1000].map(x=>html`<g key=${x} stroke="#C6A46A"><path d=${'M'+x+' 0v26'}/><circle cx=${x} cy="32" r="6" fill="#C6A46A"/></g>`)}</svg>`};
+const Lamp=({c})=>html`<div class=${'lamp '+c} aria-hidden="true"><svg width="54" viewBox="0 0 54 150" fill="none" stroke="#C6A46A" stroke-width="1.2"><path d="M27 0V50"/><path d="M12 50H42L48 62Q27 70 6 62Z" fill="#4a1122"/><path d="M10 64Q4 100 27 120Q50 100 44 64Z" fill="#7a2842" fill-opacity=".7"/><ellipse class="fm" cx="27" cy="96" rx="6" ry="11" fill="#F2B84B" stroke="none"/><path d="M27 120V140"/><circle cx="27" cy="144" r="4" fill="#C6A46A"/></svg></div>`;
+const Lamps=()=>html`<${Lamp} c="a"/><${Lamp} c="b"/>`;
+function Countdown(){const t=+new Date(W.date);const [n,setN]=useState(Date.now());useEffect(()=>{const i=setInterval(()=>setN(Date.now()),1000);return()=>clearInterval(i)},[]);
+ let d=Math.max(0,t-n);const v=[['Days',Math.floor(d/864e5)],['Hours',Math.floor(d/36e5)%24],['Minutes',Math.floor(d/6e4)%60],['Seconds',Math.floor(d/1e3)%60]];
+ return html`<section class="cd" id="countdown" aria-label="Countdown to the wedding"><h2 class="script rv">Until we say “I do”</h2><div class="row" role="timer">${v.map(([l,x])=>html`<div class="c" key=${l}><b>${String(x).padStart(2,'0')}</b><span>${l}</span></div>`)}</div>
+ ${d===0&&html`<p class="script" style=${{fontSize:'2.4rem',marginTop:20}}>Today is the day!</p>`}</section>`}
+function RSVP(){const [f,setF]=useState({name:'',attend:'yes',guests:'2',msg:''});const [e,setE]=useState({});const [done,setDone]=useState(false);
+ const set=k=>ev=>setF({...f,[k]:ev.target.value});
+ const submit=ev=>{ev.preventDefault();const x={};if(f.name.trim().length<2)x.name='Please enter your full name.';
+  if(f.attend==='yes'&&!(+f.guests>=1&&+f.guests<=10))x.guests='Please choose between 1 and 10 guests.';setE(x);if(Object.keys(x).length)return;
+  try{const a=JSON.parse(localStorage.getItem('rsvps')||'[]');a.push({...f,at:Date.now()});localStorage.setItem('rsvps',JSON.stringify(a))}catch(_){}
+  setDone(true)};
+ const wa='https://wa.me/'+W.whatsapp+'?text='+encodeURIComponent('Hello! This is '+f.name+'. '+(f.attend==='yes'?'We will be joining you with '+f.guests+' guest(s). ':'Sadly I cannot make it. ')+(f.msg?f.msg:'')+' – RSVP for '+W.bride+' & '+W.groom);
+ return html`<section class="rsvp paper" id="rsvp"><div class="wrap"><div class="box rv">
+ ${!done?html`<${Lotus} w=${54}/><h2>Will you join us?</h2><p class="sub">Kindly reply by 15 January 2027</p>
+ <form onSubmit=${submit} noValidate>
+ <label>Your name<input value=${f.name} onInput=${set('name')} autoComplete="name" aria-invalid=${!!e.name} aria-describedby="en"/><span class="err" id="en" role="alert">${e.name}</span></label>
+ <fieldset style=${{border:0,padding:0}}><legend style=${{fontSize:'.82rem',color:'var(--wine)',fontWeight:500}}>Will you attend?</legend><div class="seg">
+ <label><input type="radio" name="a" checked=${f.attend==='yes'} onChange=${()=>setF({...f,attend:'yes'})}/><span>Joyfully accept</span></label>
+ <label><input type="radio" name="a" checked=${f.attend==='no'} onChange=${()=>setF({...f,attend:'no'})}/><span>Regretfully decline</span></label></div></fieldset>
+ ${f.attend==='yes'&&html`<label>Number of guests (including you)<input type="number" min="1" max="10" value=${f.guests} onInput=${set('guests')}/><span class="err" role="alert">${e.guests}</span></label>`}
+ <label>A message for the couple (optional)<textarea rows="3" value=${f.msg} onInput=${set('msg')}></textarea></label>
+ <button class="btn s" type="submit" style=${{justifyContent:'center'}}>Send RSVP <i>→</i></button></form>`
+ :html`<div class="ok" style=${{display:'block'}} tabindex="-1" ref=${r=>r&&r.focus()}><${Lotus} w=${54}/><div class="script">${f.attend==='yes'?'Thank you, '+f.name.split(' ')[0]:'We will miss you'}</div>
+ <p>${f.attend==='yes'?'Your reply has been noted. We cannot wait to celebrate with you.':'Thank you for letting us know. You will be in our hearts.'}</p>
+ <a class="btn s" href=${wa} target="_blank" rel="noopener">Also send on WhatsApp <i>→</i></a></div>`}
+ </div></div></section>`}
+function Envelope({onOpen}){const r=useRef();const [busy,setB]=useState(false);
+ const open=()=>{if(busy)return;setB(true);const q=s=>r.current.querySelector(s);const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  try{const c=new (window.AudioContext||webkitAudioContext)();[523,659,784,1047].forEach((f,i)=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.setValueAtTime(0,c.currentTime+i*.25);g.gain.linearRampToValueAtTime(.07,c.currentTime+i*.25+.05);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+i*.25+2);o.connect(g).connect(c.destination);o.start(c.currentTime+i*.25);o.stop(c.currentTime+i*.25+2.1)})}catch(_){}
+  const tl=gsap.timeline({onComplete:onOpen,defaults:{ease:'power2.inOut'}});const k=rm?.1:1;
+  tl.to(q('.seal'),{scale:1.25,duration:.25*k,ease:'power2.out'}).to(q('.seal'),{scale:0,rotate:40,opacity:0,duration:.4*k})
+   .to(q('.flap'),{rotateX:180,duration:.9*k,zIndex:1},'-=.1').to(q('.card'),{yPercent:-46,duration:.9*k},'-=.2')
+   .to(q('.eb'),{scale:1.5,duration:.9*k},'+=.2').to(r.current,{opacity:0,duration:.9*k},'-=.4');};
+ return html`<div id="env" ref=${r}><svg class="bgp" width="100%" height="100%" aria-hidden="true"><rect width="100%" height="100%" fill="url(#je)"/></svg><${Jaali} id="je" o=${.5}/>
+ <${Flower} s=${190} style=${{left:-60,top:-50}}/><${Flower} s=${190} style=${{right:-60,bottom:-50}}/>
+ <div class="eb"><div class="body"></div><div class="card"><div><div style=${{letterSpacing:'.3em',fontSize:'.7rem'}}>THE FAMILIES OF</div><div class="script">${W.bride} & ${W.groom}</div><${Lotus} w=${40} c="#C6A46A"/></div></div>
+ <div class="pocket"></div><div class="flap"></div><div class="bord"></div><button class="seal" onClick=${open} aria-label="Open invitation">A&K</button></div>
+ <div class="env-txt"><p>You are cordially invited</p><button onClick=${open}>OPEN INVITATION</button></div></div>`}
+function App(){const [go,setGo]=useState(false);const root=useRef();
+ useEffect(()=>{if(!go)return;document.body.classList.remove('lock');scrollTo(0,0);
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;gsap.registerPlugin(ScrollTrigger);
+  const ctx=gsap.context(()=>{
+   gsap.utils.toArray('.rv').forEach(el=>gsap.from(el,{y:40,opacity:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+   gsap.utils.toArray('.px').forEach(el=>gsap.to(el,{yPercent:+el.dataset.s||-12,ease:'none',scrollTrigger:{trigger:el.parentElement,scrub:true,start:'top bottom',end:'bottom top'}}));
+   gsap.from('.hero .in>*',{y:30,opacity:0,stagger:.25,duration:1.4,ease:'power3.out',delay:2});
+  },root.current);return()=>ctx.revert()},[go]);
+ const petals=Array.from({length:12},(_,i)=>({l:(i*83)%100,d:12+(i*7)%9,dl:-(i*3)%14,s:.7+(i%4)*.2}));
+ return html`<div>${!go&&html`<${Envelope} onOpen=${()=>setGo(true)}/>`}
+ ${go&&html`<div ref=${root}><${Jaali} id="jh" o=${.35}/><${MainCurtain}/>
+ <nav aria-label="Main"><span class="m">A&K</span><div><a class="hide" href="#letter">Invitation</a><a class="hide" href="#events">Celebrations</a><a class="hide" href="#venue">Venue</a><a href="#rsvp">RSVP</a></div></nav>
+ ${petals.map((p,i)=>html`<span class="petal" key=${i} aria-hidden="true" style=${{left:p.l+'%',animationDuration:p.d+'s',animationDelay:p.dl+'s',transform:'scale('+p.s+')'}}></span>`)}
+ <main><header class="hero"><${Torana}/><${Lamps}/><svg class="arch px" data-s="8" viewBox="0 0 300 380" aria-hidden="true"><path d=${archPath} fill="url(#jh)" stroke="#C6A46A" stroke-width="1.5"/><path d="M36 360V132C36 62 104 26 150 26S264 62 264 132V360" fill="none" stroke="#C6A46A" stroke-width=".6"/></svg>
+  <div class="in"><p class="tag">Two families, one beautiful beginning</p><h1>${W.bride}<span class="amp">&</span>${W.groom}</h1><${Lotus} w=${56}/><p class="dt">${W.dateText.toUpperCase()}</p></div></header>
+ <section class="letter paper" id="letter"><div class="wrap"><${Curtain} cls="sheet"><div class="blessing">॥ शुभ विवाह ॥</div><${Lotus}/>
+  <p class="fam">With the blessings of our elders,<br/>Mr. & Mrs. Sharma and Mr. & Mrs. Verma</p>
+  <p>request the pleasure of your company at the wedding of their children. A daughter who brought love and laughter into our home is beginning a new journey, and we would be honoured to share it with you.</p>
+  <p>Your presence and blessings will make our celebration complete.</p><${Lotus}/><div class="script">With love, our families</div><//></div></section>
+ <section class="events paper" id="events"><div class="wrap"><h2 class="rv script">The celebrations</h2>
+  ${W.events.map(e=>html`<article class="ev" key=${e.k}><${Art} k=${e.k}/><div class="rv"><h3><i class="script">${e.s}</i>${e.t}</h3>
+   <dl><dt>Date</dt><dd>${e.d}</dd><dt>Time</dt><dd>${e.h}</dd><dt>Venue</dt><dd>${e.v}</dd></dl><p>${e.p}</p></div></article>`)}</div></section>
+ <${Countdown}/>
+ <section class="venue" id="venue"><div class="wrap"><h2 class="rv">Find us</h2><h3 class="rv">${W.venue}</h3><address class="rv">${W.addr}</address>
+  <a class="btn rv" target="_blank" rel="noopener" href=${'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(W.mapQ)}>Get directions <i>→</i></a></div><${Palace}/></section>
+ <${RSVP}/>
+ <footer class="fin"><${Flower} cls="fl-r" s=${220} style=${{left:-60,top:-40}}/><${Flower} cls="fl-r" s=${220} style=${{right:-60,bottom:-40}}/>
+  <${Lotus} w=${70}/><q class="rv">Some celebrations are remembered. Some are felt. We hope you will feel this one with us.</q>
+  <h2 class="rv">${W.bride} & ${W.groom}</h2><p class="d rv">${W.dateText.toUpperCase()}</p><small>Made with love · See you there ❤️</small></footer></main></div>`}</div>`}
+ReactDOM.createRoot(document.getElementById('root')).render(html`<${App}/>`);
+</script></body></html>
